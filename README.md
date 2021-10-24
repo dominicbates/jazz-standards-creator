@@ -7,6 +7,7 @@ Model to create jazz chord progressions
 Repository structure:
 
     README.md
+    data/
 
 ### Training data
 
