@@ -1,8 +1,14 @@
 # jazz-standards-creator
 
+### Summary
+
 Model to create jazz chord progressions
 
-# Training data
+Repository structure:
+
+    README.md
+
+### Training data
 
 - Data obtained from this paper:
 
