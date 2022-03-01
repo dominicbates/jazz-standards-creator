@@ -1,0 +1,80 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 check some pre-july data (renewal dates?)\
+\
+\
+\
+pdl.partydim\
+\
+partydim table\
+\
+customerstatus = registered\
+\
+multiple rows per person, use row active for most recent\
+\
+check for null or empty\
+\
+\
+registered vs prospective (customer status)\
+\
+in paartydim. only regisration date (not migrated registration date\
+everyone migrated has daate of dec 7th so need to join in date\
+native use insert date\
+join to drupal and pulled original date\
+can do same with prospect\
+\
+\
+migrated everyone who had interaction (6m customers)\
+can only migrate as registered if they have a password\
+Registrerd from August onwards, but registered before august no password\
+\
+\
+for each contactid need to do groupings\
+ofr everyone thats prospect and get date that they became\
+\
+\
+min registraction date\
+\
+\
+\
+pdl.partydim\
+where cusomterstatus is prospect or registered\
+for cases where drupalid in partydim join to cusopmter info\
+in cases where \
+for each contactid, the min startdate\
+\
+same contactid might have multiple rows\
+\
+in party dim \
+\
+distict contactid,\
+drupal id\
+join to table to get migrated\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 take pdl.partydim table\
+find registered or prospect rows/cusomters\
+group all these rows by cusomter and take registered date\
+for those with drupalid, join to sbx.CUSTOMER_INFO_DRUPAL\
+take date as previous registered date\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 then take min of both of these dates as registrered date\
+\
+case when date_dupal < date_partydim then date_drupal\
+         else date_partydim end\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 \
+}

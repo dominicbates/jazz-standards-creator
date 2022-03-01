@@ -1,0 +1,21 @@
+Format of files
+
+!!! Some song/artist/year info
+!!!
+!!!
+
+* Style
+* other stuff…
+* ...
+* Time signature
+* Key
+
+
+Numbers at start of chords represent type of note e.g. 1 (semi-breve), 2 (minim), 1(crotchet), … 2. (dotted minim)
+
+=  bars
+== double bars?
+
+*>A2       Are these sections?
+
+
