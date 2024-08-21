@@ -2,7 +2,9 @@
 
 ### Summary
 
-Model to create jazz chord progressions
+Preliminary testing of training an LSTM to create jazz chord progressions. Code is not productionised or cleaned up, but repo is set to public in case of interest to anyone. 
+
+Generated chord progressions are sensible and the model clearly understands jazz harmony, however it is not so great at structure over long timescales (and often doesn't return back to the original progression, e.g. produces AABCDE... rather than AABA). 
 
 Repository structure:
 
